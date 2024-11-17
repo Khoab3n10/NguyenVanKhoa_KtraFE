@@ -1,0 +1,160 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style>
+    #content {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tren {
+        width: 80%;
+        margin: 10px 0px;
+        background-color: #b7d5da;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    #duoi {
+        width: 100%;
+        align-items: flex-end;
+        background-color: #f1eaea;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+</style>
+<html>
+<head>
+    <script src="~/Scripts/MyJS/DatHangJS.js"></script>
+    <title>Đặt hàng</title>
+</head>
+<body>
+    <div id="content">
+        <div id="tren">
+            <table>
+                <tr>
+                    <td>
+                        2. Địa chỉ giao hàng
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Bạn muốn giao hàng đến địa chỉ khác?  <a href="#">Thêm địa chỉ giao hàng mới</a>
+                    </td>
+                </tr>
+            </table>
+            <div id="duoi">
+                <table align="center">
+                    <tr>
+                        <td></td>
+                        <td>Họ tên</td>
+                        <td>
+                            <br />
+                            <input type="text" id="iName" name="Name" placeholder="Nhập tên ở đây" />
+                            <br />
+                            <br />
+                            <span id="Name_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Điện thoại di động</td>
+                        <td>
+                            <br />
+                            <input type="text" id="iPhone" name="Phone" placeholder="Nhập SĐT ở đây" />
+                            <br />
+                            <br />
+                            <span id="Phone_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Tỉnh/Thành phố</td>
+                        <td>
+                            <br />
+                            <select id="iCity" name="City">
+                                <option>Chọn Tỉnh/Thành phố</option>
+                                <option>TP.HCM</option>
+                            </select>
+                            <br />
+                            <br />
+                            <span id="City_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Quận/Huyện</td>
+                        <td>
+                            <br />
+                            <select id="iDistrist" name="Distrist">
+                                <option>Chọn Quận/Huyện</option>
+                                <option>Quận Phú Nhuận</option>
+                            </select>
+                            <br />
+                            <br />
+                            <span id="Distrist_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Phường/Xã</td>
+                        <td>
+                            <br />
+                            <select id="iWard" name="Ward">
+                                <option>Chọn Phường/Xã</option>
+                                <option>Phường 8</option>
+                            </select>
+                            <br />
+                            <br />
+                            <span id="Ward_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Địa chỉ</td>
+                        <td>
+                            <br />
+                            <input type="text" id="iAddress" name="Address" placeholder="Ví dụ: 52,Đường Trần Hưng Đạo" />
+                            <br />
+                            <br />
+                            <span id="Address_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Loại địa chỉ</td>
+                        <td>
+                            Để nhận hàng thuận tiện hơn, bạn vui lòng cho Tiki biết loại địa chỉ
+                            <br />
+                            <br />
+                            <input type="radio" id="iAddressTypeHome" name="AddressType" value="Nhà riêng/ Chung cư" />Nhà riêng/ Chung cư
+                            <input type="radio" id="iAddressTypeCompany" name="AddressType" value="Cơ quan/ Công ty" />Cơ quan/ Công ty
+                            <br />
+                            <br />
+                            <input type="checkbox" id="iBase" name="Base" />Sử dụng địa chỉ này làm mặc định
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <br />
+                            <input type="button" id="btnCancer" name="Cancer" value="Hủy bỏ" />
+                            <input type="button" id="btnShip" name="Ship" value="Giao đến địa chỉ này" onclick="Check2();" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

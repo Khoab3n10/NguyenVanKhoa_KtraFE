@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<style type="text/css">
+    html {
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #sale {
+        color: #39bc86;
+        background-color: #effff4;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+        #sale p {
+            color: #3d8afd;
+        }
+
+    .quick-access {
+        margin-right: 100px; /* Điều chỉnh giá trị 10px theo ý muốn */
+    }
+
+    header {
+        display: flex;
+    }
+
+        header .logo img {
+            height: 100px;
+        }
+
+        header .searchBar {
+            margin: auto;
+            width: 70%;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+            header .searchBar table {
+                border-spacing: 20px;
+                width: 100%;
+            }
+
+            header .searchBar #iSearch {
+                width: 90%;
+            }
+
+            header .searchBar #txtSearchBar {
+                color: #938384;
+            }
+
+        header .quickAccess {
+            color: #938384;
+            vertical-align: middle;
+            margin: auto auto auto 0px;
+        }
+
+    section {
+        min-height: 300px;
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="sale">Freeship đơn từ 45k, giảm nhiều hơn cùng FREESHIP XTRA</div>
+        <header>
+            <div class="logo">
+                <img src="~/Content/img/logo.png" />
+            </div>
+            <div class="searchBar">
+                <table>
+                    <tr>
+                        <td>
+                            <input placeholder="100% hàng thật" type="text" id="iSearch" name="Search" />
+                            <input type="button" id="btnTimKiem" name="TimKiem" value="Tìm kiếm" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="txtSearchBar">điện gia dụng&ensp;&emsp;xe cộ&ensp;&emsp;mẹ & bé&ensp;&emsp;khỏe đẹp&ensp;&emsp;nhà cửa&ensp;&emsp;sách&ensp;&emsp;thể thao&ensp;&emsp;oppo&ensp;&emsp;iphone15 pro max&ensp;&emsp;iphone 14&ensp;&emsp;xiaomi&ensp;&emsp;a17k</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="quickAccess">
+                <table>
+                    <tr>
+                        <td>
+                            <i class="fas fa-home" style="color:#cccccf"></i>&ensp;<a href="#">Trang chủ</a>
+                            <i class="far fa-smile-wink" style="color:#cccccf"></i>&ensp;<a href="#">Tài khoản</a>
+                            <i class="fas fa-shopping-cart" style="color:#2679ff"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-map-marker-alt" style="color:#cccccf"></i>&ensp;Giao đến: <a href="#">Q.1, P.Bến Nghé, Hồ Chí Minh</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </header>
+        <div>
+            Cam kết&ensp;&emsp;
+            <i class="fas fa-check-circle" style="color:#2679ff"></i>&nbsp;100% hàng thật&ensp;&emsp;
+            <i class="fas fa-hand-holding-usd" style="color:#2679ff"></i>&nbsp;Hoàn 200% nếu hàng giả&ensp;&emsp;
+            <i class="fas fa-box" style="color:#2679ff"></i>&nbsp;30 ngày đổi trả&ensp;&emsp;
+            <i class="fas fa-rocket" style="color:#2679ff"></i>&nbsp;Giao nhanh 2h&ensp;&emsp;
+            <i class="fas fa-tag" style="color:#2679ff"></i>&nbsp;Giá siêu rẻ&ensp;&emsp;
+            <i class="fas fa-truck-moving" style="color:#2679ff"></i>&nbsp;Freeship mọi đơn&ensp;&emsp;
+        </div>
+        <section>
+            @RenderBody()
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>
